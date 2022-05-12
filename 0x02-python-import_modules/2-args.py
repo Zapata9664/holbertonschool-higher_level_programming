@@ -13,5 +13,4 @@ if __name__ == "__main__":
         print("{} arguments:".format(size))
         for i in sys.argv[1:]:
             count += 1
-            print("{}: {}".format(count, i)) 
-
+            print("{}: {}".format(count, i))
