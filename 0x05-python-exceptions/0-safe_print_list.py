@@ -2,11 +2,12 @@
 def safe_print_list(my_list=[], x=0):
     try:
         count = 0
-        string = ""
         while count < x:
-            string += str(my_list[count])
+            print("{}".format(my_list[count]), end='')
             count = count+1
-            print(string)
-    except:
-        print(string)
-    return(count)
+        print()
+        return count
+    except IndexError:
+        print()
+        return count
+        pass
