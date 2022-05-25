@@ -1,15 +1,16 @@
 #!/usr/bin/python3
 """Class Square """
 
+class Square:
+    """ Class square"""
+    def __init__(self, size=0):
+        """ Parameter: size of square"""
+   
 
-def __init__(self, size=0):
-    """ Class square
-    param: size of a square
-    """
-    self.__size = size
-    if type(size) != int:
-        raise TypeError("size must be an integer")
-    if size < 0:
-        raise ValueError("size must be >= 0")
-    else
-    self.__size = size
+        if type(size) != int:
+            raise TypeError("size must be an integer")
+        else:
+            if size < 0:
+                raise ValueError("size must be >= 0")
+            else:
+                self.__size = size
