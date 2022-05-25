@@ -16,6 +16,6 @@ class Square:
             else:
                 self.__size = size
 
-    def area(self)
-    """Public instance method"""
-    return (self.size * self.size)
+    def area(self):
+        """Public instance method"""
+        return (self.__size * self.__size)
