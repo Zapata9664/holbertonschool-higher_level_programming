@@ -5,5 +5,5 @@
 class Square:
 
 
-"""Define class Square """
-pass
+    """Define class Square """
+    pass
