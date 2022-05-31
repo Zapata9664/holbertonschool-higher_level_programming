@@ -1,5 +1,12 @@
 #!/usr/bin/python3
+"""
+Module by a function for add two numbers
+
+"""
 def add_integer(a, b=98):
+    """
+    Function that adds two integer and/or float numbers
+    """
     if type(a) != int and type(a) != float:
         raise TypeError("a must be an integer")
     elif type(b) != int and type(b) != float:
