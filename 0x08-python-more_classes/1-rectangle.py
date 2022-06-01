@@ -6,11 +6,9 @@ class Rectangle:
     """clase rectangulo con base y altura"""
 
     def __init__(self, width=0, height=0):
-        """
-        Instancia de rectangulo 
+        """Instancia de rectangulo
         width - altura del rectangulo
-        height - base del rectangulo
-        """
+        height - base del rectangulo"""
         self.width = width
         self.height = height
 
