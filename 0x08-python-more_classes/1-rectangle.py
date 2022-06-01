@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-"""Module 1-rectangle"""
+"""
+Module 1-rectangle
+"""
 
 
 class Rectangle:
-    """
-    clase rectangulo con base y altura
-
-    """
+    """clase rectangulo con base y altura """
 
     def __init__(self, width=0, height=0):
         """
@@ -15,8 +14,8 @@ class Rectangle:
         height - base del rectangulo
 
         """
-        self.height = height
         self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -30,7 +29,7 @@ class Rectangle:
         """
         establecer ancho del rectangulo
         """
-        if type(value):
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
