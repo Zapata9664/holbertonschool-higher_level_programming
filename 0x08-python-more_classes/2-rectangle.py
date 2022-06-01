@@ -9,8 +9,8 @@ class Rectangle:
     """
 
     def __init__(self, width=0, height=0):
-        """
-        Instancia de rectangulo 
+         """
+        Instancia de rectangulo
         width - altura del rectangulo
         height - base del rectangulo
 
@@ -23,7 +23,7 @@ class Rectangle:
         """
         obtiene la altura del rectangulo
         """
-        return self.___width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -37,10 +37,10 @@ class Rectangle:
         self.__width = value
 
     @property
+    """
+    Obtiene la base del rectangulo
+    """
     def height(self):
-        """
-        Obtiene la base del rectangulo
-        """
         return self.__height
 
     @height.setter
@@ -54,16 +54,12 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
+
     def area(self):
-        """
-        retornar el area de un rectangulo
-        """
         return self.__width * self.__height
 
     def perimeter(self):
-        """
-        retornar el perimetro de una rectangulo
-        """
-        if self.__width == 0 or self.__height == 0:
+        if self.__width is 0 or self.__height is 0:
             return 0
-        return (self.__width * 2) + (self.__height * 2)
+        return (2 * self.__width) + (2 * self.__height)
+        
