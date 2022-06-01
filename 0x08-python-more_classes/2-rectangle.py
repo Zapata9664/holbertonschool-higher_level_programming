@@ -10,7 +10,6 @@ class Rectangle:
         Instancia de rectangulo 
         width - altura del rectangulo
         height - base del rectangulo
-
         """
         self.width = width
         self.height = height
@@ -52,4 +51,3 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return 0
         return 2 * (self.__width + self.__height)
-        
