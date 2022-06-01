@@ -10,7 +10,6 @@ class Rectangle:
         Instancia de rectangulo 
         width - altura del rectangulo
         height - base del rectangulo
-
         """
         self.width = width
         self.height = height
