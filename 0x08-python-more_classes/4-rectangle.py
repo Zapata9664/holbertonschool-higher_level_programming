@@ -6,7 +6,9 @@ class Rectangle:
     """Rectangle class defined by width and height."""
 
     def __init__(self, width=0, height=0):
-        """clase rectangulo con base y altura"""
+        """Instancia de rectangulo
+        width - altura del rectangulo
+        height - base del rectangulo"""
         self.width = width
         self.height = height
 
