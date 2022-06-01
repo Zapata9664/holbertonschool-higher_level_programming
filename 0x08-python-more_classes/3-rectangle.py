@@ -3,33 +3,36 @@
 
 
 class Rectangle:
-    """
-    clase rectangulo con base y altura
-
-    """
+    """clase rectangulo con base y altura"""
 
     def __init__(self, width=0, height=0):
-        """
+        """ 
         Instancia de rectangulo 
         width - altura del rectangulo
         height - base del rectangulo
-
         """
         self.width = width
         self.height = height
 
+    def __str__(self):
+        """ dibujar el rectangulo"""
+        if self.__height == 0 or self.__width == 0:
+            return ''
+        rec_str = ''
+        for i in range(self.__height):
+            for j in range(self.__width):
+                rec_str += '#'
+            rec_str += '\n'
+        return rec_str[:-1]
+
     @property
     def width(self):
-        """
-        obtiene la altura del rectangulo
-        """
-        return self.___width
+        """obtiene la altura del rectangulo"""
+        return self.__width
 
     @width.setter
     def width(self, value):
-        """
-        establecer ancho del rectangulo
-        """
+        """establecer altura del rectangulo"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -38,16 +41,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """
-        Obtiene la base del rectangulo
-        """
+        """ Obtener base del rectangulo"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """
-        Establecer la base del rectangulo
-        """
+        """ Establecer base del rectangulo"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -55,22 +54,11 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """
-        retornar el area de un rectangulo
-        """
+        """Retornar area del rectungulo"""
         return self.__width * self.__height
 
     def perimeter(self):
-        """
-        retornar el perimetro de una rectangulo
-        """
-        if self.__width == 0 or self.__height == 0:
+        """ Retornar perimetro del rectangulo """
+        if self.__height == 0 or self.__width == 0:
             return 0
-        return (self.__width * 2) + (self.__height * 2)
-
-    def __str__(self):
-        total = ""
-        if self.__height == 0 or self.width == 0:
-            return total
-        for x in range(self.__height):
-            
+        return (self.__width * 2 + self.__height * 2)
