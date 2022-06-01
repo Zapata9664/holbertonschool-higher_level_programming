@@ -25,6 +25,10 @@ class Rectangle:
         """Dibujar una instancia de rectangulo"""
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
+    def __del__(self):
+        """Borrar instancia de un rectangulo"""
+        print("Bye rectangle...")
+
     @property
     def width(self):
         """obtiene la altura del rectangulo"""
