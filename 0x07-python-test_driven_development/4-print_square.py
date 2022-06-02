@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" """
+""" Modulo for import print square"""
 
 
 def print_square(size):
-    """  """
+    """ Picture a square of size int and mor tan 0 """
     if type(size) is not int:
         raise TypeError("size must be an integer")
 
