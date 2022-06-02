@@ -1,0 +1,22 @@
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Cheking first name like a string and last name like a integer
+>>> say_my_name("valentina", 2)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+
+Cheking last name like a string and first name like a integer
+>>> say_my_name(2, "Hidalgo")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+Cheking both like a string
+>>> say_my_name("John", "Hidalgo")
+My name is John Hidalgo
+
+Cheking both like integer
+>>> say_my_name(2, 3)
+Traceback (most recent call last):
+TypeError: first_name must be a string
