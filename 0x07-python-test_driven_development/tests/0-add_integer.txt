@@ -71,3 +71,7 @@ SyntaxError: invalid syntax
 >>> add_integer(1000x00, 2)
 Traceback (most recent call last):
 SyntaxError: invalid syntax
+
+>>> add_integer("Hola", "Valentina")
+Traceback (most recent call last):
+TypeError: a must be an integer
