@@ -60,7 +60,7 @@ OverflowError: cannot convert float infinity to integer
 Traceback (most recent call last):
 TypeError: add_integer() missing 1 required positional argument: 'a'
 
->>> add_integer("hello", "there")
+>>> add_integer("Hola", "Valentina")
 Traceback (most recent call last):
 TypeError: a must be an integer
 
@@ -72,6 +72,10 @@ SyntaxError: invalid syntax
 Traceback (most recent call last):
 SyntaxError: invalid syntax
 
->>> add_integer("Hola", "Valentina")
+>>> add_integer(2)
+100
+
+# Test 7 - Variable not defined as parameter
+>>> add_integer(a, 17)
 Traceback (most recent call last):
-TypeError: a must be an integer
+NameError: name 'a' is not defined
