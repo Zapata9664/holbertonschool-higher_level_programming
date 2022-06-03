@@ -21,10 +21,7 @@ Cheking both like integer
 Traceback (most recent call last):
 TypeError: first_name must be a string
 
->>> say_my_name("Valentina")
-My name is Valentina
-
->>> say_my_name("LeBron", ["Valentina", "Hidalgo", "Alcaraz"])
+>>> say_my_name("Ana", ["Valentina", "Hidalgo", "Alcaraz"])
 Traceback (most recent call last):
 TypeError: last_name must be a string
 
