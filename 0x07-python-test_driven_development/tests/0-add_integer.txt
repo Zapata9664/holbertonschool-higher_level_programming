@@ -36,17 +36,14 @@ Add a negative and a positive number and return a negative number
 See if the error comes out when a = "string" and b = int is entered
 >>> add_integer("abc", 2)
 Traceback (most recent call last):
-...
 TypeError: a must be an integer
 
 See if the error comes out when a = int and b = "string" is entered
 >>> add_integer(2, "abb")
 Traceback (most recent call last):
-...
 TypeError: b must be an integer
 
 check None
 >>> add_integer(None)
 Traceback (most recent call last):
-...
 TypeError: a must be an integer
