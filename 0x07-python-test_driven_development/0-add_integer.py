@@ -9,12 +9,14 @@ def add_integer(a, b=98):
     """
     Function that adds two integer and/or float numbers
     """
-    if type(a) is not int and type(a) != float:
+    if type(a) is not int and type(a) is not float:
         raise TypeError("a must be an integer")
-    elif type(b) is not int and type(b) != float:
+    if type(b) is not int and type(b) is not float:
         raise TypeError("b must be an integer")
-    else:
-        c = a + b
-        if type(c) is float:
-            c = int(c)
-        return c
+    
+    if type(a) is float:
+        a = int(a)
+    if type(b) is float:
+        b = int(b)
+    
+    return a + b
