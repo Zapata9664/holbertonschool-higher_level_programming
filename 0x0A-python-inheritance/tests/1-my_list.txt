@@ -17,3 +17,13 @@ negatives:
 
 >>> my_list.print_sorted()
 [-2, -1]
+
+ >>> my_list = MyList("Valentina")
+    
+>>> my_list
+['V', 'a', 'l', 'e', 'n', 't', 'i', 'n', 'a']
+
+>>> new = MyList()
+>>> new.print_sorted()
+[]
+
