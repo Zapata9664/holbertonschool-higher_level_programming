@@ -6,4 +6,4 @@ ttributes and methods of an object"""
 
 def lookup(obj):
     """return list"""
-    return dir(list)
+    return dir(obj)
