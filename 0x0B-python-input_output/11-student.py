@@ -2,9 +2,6 @@
 """Student class"""
 
 
-from attr import attrs
-
-
 class Student:
     """Make student class"""
 
@@ -29,4 +26,3 @@ class Student:
         """that replaces all attributes of the Student instance"""
         for x in json:
             self.__dict__.update({x: json[x]})
-            
