@@ -29,3 +29,4 @@ class Student:
         """that replaces all attributes of the Student instance"""
         for x in json:
             self.__dict__.update({x: json[x]})
+            
