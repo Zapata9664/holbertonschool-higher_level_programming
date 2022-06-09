@@ -2,9 +2,6 @@
 """Student class"""
 
 
-from attr import attrs
-
-
 class Student:
     """Make student class"""
 
