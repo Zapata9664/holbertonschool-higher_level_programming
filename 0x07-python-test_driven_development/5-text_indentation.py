@@ -2,9 +2,6 @@
 """ module for import text indentation i"""
 
 
-from cgitb import text
-
-
 def text_indentation(text):
     """ split strings
     Text: text to split"""
