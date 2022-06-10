@@ -25,10 +25,10 @@ def matrix_divided(matrix, div):
         if len_r != 0 and len(elements) != len_r:
             raise TypeError("Each row of the matrix must have the same size")
 
+        mensaje = "matrix must be a matrix (list of lists) of integers/floats"
         for numero in elements:
             if not type(numero) in (int, float):
-                raise TypeError(
-                    "matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError(mensaje)
         len_r = len(elements)
 
     new_m = list(
