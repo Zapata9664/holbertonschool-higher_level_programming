@@ -38,3 +38,5 @@ print square 5x5
 #####
 #####
 #####
+
+>>> print_square(0)
