@@ -24,5 +24,5 @@ class Square:
         try:
             ("{:d}".format(value))
             self.__size = value
-        except:
+        except Exception:
             raise TypeError("size must be an integer")
