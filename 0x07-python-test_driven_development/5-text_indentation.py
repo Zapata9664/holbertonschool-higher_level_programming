@@ -2,6 +2,9 @@
 """ module for import text indentation i"""
 
 
+from cgitb import text
+
+
 def text_indentation(text):
     """ split strings
     Text: text to split"""
@@ -9,7 +12,13 @@ def text_indentation(text):
     if type(text) is not str:
         raise TypeError("text must be a string")
 
-    for symbol in ".:?":
-        text = (symbol + "\n\n").join(
-            [line.strip("") for line in text.split(symbol)])
-    print("{}".format(text), end="")
+    s = text[:]
+
+    for d in ".?:":
+        list_text = s.split(d)
+        s = ""
+        for i in list_text:
+            i = i.strip(" ")
+            s = i + d if s is "" else s + "\n\n" + i + d
+
+    print(s[:-3], end="")
