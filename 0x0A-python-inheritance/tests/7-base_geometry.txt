@@ -45,3 +45,8 @@ TypeError: average must be an integer
 >>> base.integer_validator("average", "valentina")
 Traceback (most recent call last):
 TypeError: average must be an integer
+
+
+>>> base.integer_validator("my_int", 12)
+
+>>> base.integer_validator("width", 89)
