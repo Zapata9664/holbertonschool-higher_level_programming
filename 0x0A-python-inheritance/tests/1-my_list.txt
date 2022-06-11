@@ -1,24 +1,25 @@
 
 >>> MyList = __import__('1-my_list').MyList
 
-positives:
->>> my_list = MyList()
->>> my_list.append(1)
->>> my_list.append(2)
->>> print(my_list)
-[1, 2]
+  >>> my_list = MyList()
 
-negatives:
->>> my_list = MyList()
->>> my_list.append(-1)
->>> my_list.append(-2)
->>> print(my_list)
-[-1, -2]
+>>> my_list
+[]
+
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+
+>>> my_list
+[1, 4, 2]
 
 >>> my_list.print_sorted()
-[-2, -1]
+[1, 2, 4]
 
- >>> my_list = MyList("Valentina")
+>>> my_list
+[1, 4, 2]
+
+>>> my_list = MyList("Valentina")
     
 >>> my_list
 ['V', 'a', 'l', 'e', 'n', 't', 'i', 'n', 'a']
@@ -35,3 +36,5 @@ negatives:
 >>> my_list = MyList()
 >>> my_list
 []
+
+
