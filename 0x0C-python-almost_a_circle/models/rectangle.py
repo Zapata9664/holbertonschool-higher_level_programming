@@ -92,3 +92,19 @@ class Rectangle(Base):
         """"""
         st = (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}")
         return (st)
+
+    def update(self, *args):
+        """"""
+        if args is not None and len(args) != 0:
+            if len(args) >= 1:
+                if type(args[0]) != int and args[0] is not None:
+                    raise TypeError("id must be an integer")
+                self.id = args[0]
+            if len(args) == 2:
+                self.width = args[1]
+            if len(args) == 3:
+                self.height = args[2]
+            if len(args) == 4:
+                self.x = args[3]
+            if len(args) == 5:
+                self.y = args[4]
