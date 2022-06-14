@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 """"""
+
+
+import json
+
 class Base:
     """"""
     __nb_objects = 0
@@ -11,4 +15,33 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-            
+    
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """"""
+        if list_dictionaries is None or list_dictionaries == []:
+            return "[]"
+        return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """"""
+        if list_objs is None or list_objs == []:
+           json_s = "[]"
+        else:
+            json_s = cls.to_json_string([o.to_dictionary() for o in list_objs])
+        filename = cls.__name__ + ".json"
+        with open(filename, 'w') as f:
+                f.write(json_s)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """"""
+        if json_string is None or json_string == "[]":
+            return []
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """"""
+        
