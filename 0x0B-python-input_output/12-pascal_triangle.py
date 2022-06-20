@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 """Module for pascal triangle"""
 
-from numpy import append
-
-
 def pascal_triangle(n):
     """returns a list of lists of integers
     representing the Pascal’s triangle of n"""
