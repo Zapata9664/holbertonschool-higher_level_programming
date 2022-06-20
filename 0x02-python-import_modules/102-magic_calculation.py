@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Module magic_calculation"""
 
-
 def magic_calculation(a, b):
     """exactly the same as bytecode provided by Holberton School."""
     from magic_calculation_102 import add, sub
