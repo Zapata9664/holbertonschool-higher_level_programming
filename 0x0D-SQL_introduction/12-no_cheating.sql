@@ -1,0 +1,3 @@
+-- UPDATES THE SCORE OF BOB TO 10 IN THE TABLE SECOND_TABLE
+-- COMMAND UPDATES
+UPDATE second_table second_table SET score = 10 WHERE name = "Bob";
