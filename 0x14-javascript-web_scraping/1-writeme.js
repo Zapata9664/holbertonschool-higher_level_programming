@@ -1,10 +1,10 @@
 #!/usr/bin/node
 
+const fs = require('fs');
 const path = (process.argv[2]);
 const quote = (process.argv[3]);
-const fs = require('fs');
-fs.writeFile(path, quote, 'utf8', function (err, data) {
+fs.writeFile(path, quote, (err) => {
   if (err) {
-    return (console.log(err));
+    console.error(err);
   }
 });
