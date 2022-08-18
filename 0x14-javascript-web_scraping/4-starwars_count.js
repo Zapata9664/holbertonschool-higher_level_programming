@@ -1,8 +1,8 @@
 #!/usr/bin/node
 
 const require = require('axios').default;
-const path = (require.get(process.argv[2]))
-path.then(function (response) {
+require.get(process.argv[2])
+  .then(function (response) {
   let count = 0;
   for (const pelis of response.data.results) {
     for (const actor of pelis.characters) {
@@ -15,6 +15,6 @@ path.then(function (response) {
   console.log(count);
 })
 
-.catch(function(err) {
+.catch(function(error) {
   console.log('code :' + error.response.status);
 });
