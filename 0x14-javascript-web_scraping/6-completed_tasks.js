@@ -1,26 +1,26 @@
 #!/usr/bin/node
 
-const request = require('request');
 const url = process.argv[2];
+const request = require('request');
 
 request(url, function (error, response, body) {
   if (error) {
     console.log(error);
   }
-  const myDict = JSON.parse(body);
+  const Dict = JSON.parse(body);
 
   const user = {};
-  let UserPrevious = 1;
-  let comp = 0;
+  let completed = 0;
+  let prevUser = 1;
 
-  for (const i of myDict) {
-    if (UserPrevious !== i.userId) {
-        UserPrevious = i.userId;
-      comp = 0;
+  for (const i of Dict) {
+    if (prevUser !== i.userId) {
+      prevUser = i.userId;
+      completed = 0;
     }
-    if (i.comp) {
-      comp++;
-      user[i.userId] = comp;
+    if (i.completed) {
+      completed++;
+      user[i.userId] = completed;
     }
   }
 
