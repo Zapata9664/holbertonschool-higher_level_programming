@@ -5,7 +5,7 @@ const path = (require.get(process.argv[2]))
 path.then(function (response) {
   let count = 0;
   for (const pelis of response.data.results) {
-    for(const actor of list.characters) {
+    for (const actor of pelis.characters) {
       if (actor.endsWith('18/')) {
         count++;
         break;
