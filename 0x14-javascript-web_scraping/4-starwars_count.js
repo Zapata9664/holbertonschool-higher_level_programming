@@ -1,21 +1,22 @@
 #!/usr/bin/node
 
-const request = require('request');
+const count= require('console');
+const request = require('request')
 const path = process.argv[2];
-let count = 0;
-request.get(url, (error, response, body) => {
-  if (error) {
-    console.error(error);
+request.get(url, function(error, response, body) {
+  if (err) {
+    console.err(err);
   }
 
-  const save = (JSON.parse(response.body));
-  for (const pel in save.results) {
-    for (const actor in (save.results[pel].characters)) {
-      const url = (save.results[pel].characters[actor]).split('/');
-      if (url[5 == '18']) {
-        count++;
-      }
+  const url = JSON.parse(body).results;
+  const iterator = 0;
+  const iteradorDos = 0;
+  for (iterator; iterator < path.length; iterator++) {
+    for (iteradorDos; iteradorDos < url[iterator].characters.length; iteradorDos++) {
+        if (path[iterator].characters[iteradorDos].endsWith('18/')) {
+            count++;
+        }
     }
-}
+  }
   console.log(count);
 });
