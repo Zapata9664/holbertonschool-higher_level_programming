@@ -1,28 +1,16 @@
 #!/usr/bin/node
-
-const url = process.argv[2];
 const request = require('request');
 
-request(url, function (error, response, body) {
-  if (error) {
-    console.log(error);
+request(process.argv[2], (error, response, body) => {
+  if (!error) {
+    const completed = {};
+    JSON.parse(body).forEach((tasks) => {
+      if (tasks.completed && completed[tasks.userId] === undefined) {
+        completed[tasks.userId] = 1;
+      } else if (tasks.completed) {
+        completed[tasks.userId] += 1;
+      }
+    });
+    console.log(completed);
   }
-  const Dict = JSON.parse(body);
-
-  const user = {};
-  let completed = 0;
-  let prevUser = 1;
-
-  for (const i of Dict) {
-    if (prevUser !== i.userId) {
-      prevUser = i.userId;
-      completed = 0;
-    }
-    if (i.completed) {
-      completed++;
-      user[i.userId] = completed;
-    }
-  }
-
-  console.log(user);
 });
