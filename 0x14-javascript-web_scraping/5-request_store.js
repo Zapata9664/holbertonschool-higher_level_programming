@@ -1,9 +1,8 @@
 #!/usr/bin/node
-
 const request = require('request');
-const path = (process.argv[2]);
 const fs = require('fs');
-const file = process.argv[3];
+const path = (process.argv[2]);
+const file = (process.argv[3])
 
 request.get(path, (error, response, body) => {
   if (error) {
