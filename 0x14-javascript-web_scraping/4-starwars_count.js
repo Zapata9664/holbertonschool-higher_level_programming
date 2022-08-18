@@ -1,20 +1,22 @@
 #!/usr/bin/node
 
-const require = require('axios').default;
-require.get(process.argv[2])
-  .then(function (response) {
-  let count = 0;
-  for (const pelis of response.data.results) {
-    for (const actor of pelis.characters) {
-      if (actor.endsWith('18/')) {
+const request = require('request');
+const path = process.argv[2];
+let count = 0;
+
+request(path, function (err, response) {
+  if (err) {
+    return console.log(err);
+  }
+  const save = (JSON.parse(response.body));
+
+  for (const pel in save.results) {
+    for (const actor in (save.results[pel].characters)) {
+      const url = (save.results[pel].characters[actor]).split('/');
+      if (url[5] === '18') {
         count++;
-        break;
+      }
     }
   }
-}
   console.log(count);
-})
-
-.catch(function(error) {
-  console.log('code :' + error.response.status);
 });
