@@ -2,7 +2,7 @@
 
 const count= require('console');
 const request = require('request')
-const path = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
+const path = 'https://swapi-api.hbtn.io/api/' + process.argv[2];
 request.get(url, function(error, response, body) {
   if (err) {
     console.err(err);
