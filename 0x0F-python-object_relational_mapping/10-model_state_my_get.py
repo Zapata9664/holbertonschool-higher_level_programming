@@ -17,4 +17,6 @@ if __name__ == "__main__":
                                      .first()
     if query_name:
         print("{}".format(query_name.id))
+    else:
+        print("Not found")
     session.close()
