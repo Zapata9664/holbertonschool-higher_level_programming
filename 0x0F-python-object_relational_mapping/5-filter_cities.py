@@ -12,7 +12,6 @@ if __name__ == "__main__":
     JOIN states ON cities.state_id = states.id WHERE states.name LIKE %s \
     ORDER BY cities.id', (sys.argv[4],))
     query_rows = cur.fetchall()
-    for row in query_rows:
-        print(row)
+    print(", ".join(city[0] for city in query_rows))
     cur.close()
     conn.close()
